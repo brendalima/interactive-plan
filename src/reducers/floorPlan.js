@@ -11,6 +11,8 @@ const floorPlan = (state = INITIAL_STATE, action) => {
   switch (action.type) {
   case SET_REAL_DIMENTIONS:
     return { ...state, realWidth: action.width, realHeight: action.height };
+  default:
+    return state;
   }
 };
 
