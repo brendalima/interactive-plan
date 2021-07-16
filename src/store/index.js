@@ -1,8 +1,8 @@
-import { createStore, compose } from 'redux';
-import floorPlan from '../reducers/floorPlan';
+import { createStore } from 'redux';
+import rootReducer from '../reducers';
 
 const extension = window.devToolsExtension ? window.devToolsExtension() : (f) => f;
 
-const store = createStore(floorPlan, compose(extension));
+const store = createStore(rootReducer, extension);
 
 export default store;
