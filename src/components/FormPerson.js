@@ -4,8 +4,8 @@ import { setPersonEntry } from '../actions/floorPlan';
 
 function FormPerson() {
   const dispatch = useDispatch();
-  const [customWidth, setCustomWidth] = useState(0);
-  const [customThickness, setCustomThickness] = useState(0);
+  const [customWidth, setCustomWidth] = useState(50);
+  const [customThickness, setCustomThickness] = useState(30);
 
   const handleSubmit = () => {
     dispatch(setPersonEntry(Number(customWidth), Number(customThickness)));
@@ -18,7 +18,6 @@ function FormPerson() {
         name='width'
         value={customWidth}
         type="number"
-        placeholder="Default value is 50"
         onChange={ ({ target }) => setCustomWidth(target.value) }
       />
       <label>Enter custom body thickness (cm).</label>
@@ -26,7 +25,6 @@ function FormPerson() {
         name='thickness'
         value={customThickness}
         type="number"
-        placeholder="Default value is 30"
         onChange={ ({ target }) => setCustomThickness(target.value) }
       />
       <button type="button" onClick={ handleSubmit }>Enviar</button>
