@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Stage, Layer, Image } from 'react-konva';
-import { useDispatch } from 'react-redux';
+import { useDispatch, ReactReduxContext, Provider } from 'react-redux';
 import useImage from 'use-image';
 import {setRealDimentions} from '../actions/floorPlan';
 import plan from '../images/floorplan.png';
@@ -24,14 +24,18 @@ function FloorPlan() {
   }, []);
 
   return (
-    <div>
-      <Stage width={width} height={height}>
-        <Layer>
-          <Image image={floorplan} width={width} height={height} />
-        </Layer>
-        <Person />
-      </Stage>
-    </div>
+    <ReactReduxContext.Consumer>
+      {({ store }) => (
+        <Stage width={width} height={height}>
+          <Provider store={store}>
+            <Layer>
+              <Image image={floorplan} width={width} height={height} />
+            </Layer>
+            <Person />
+          </Provider>
+        </Stage>
+      )}
+    </ReactReduxContext.Consumer>
   )
 }
 
