@@ -9,6 +9,13 @@ function FormShapes() {
   const [y, setY] = useState(0);
   const [d, setD] = useState(0);
 
+  const clearForm = () => {
+    setShape('');
+    setX(0);
+    setY(0);
+    setD(0);
+  }
+
   const handleSubmit = () => {
     dispatch(setFurnitures({
       shape,
@@ -16,6 +23,7 @@ function FormShapes() {
       y,
       d,
     }));
+    clearForm();
   }
 
   const renderDimentionForm = () => {
