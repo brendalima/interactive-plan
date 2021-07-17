@@ -11,3 +11,9 @@ export const setPersonEntry = (width, thickness) => ({
   width,
   thickness,
 });
+
+export const SET_FURNITURES = 'SET_FURNITURES';
+export const setFurnitures = (furniture) => ({
+  type: SET_FURNITURES,
+  furniture
+});
