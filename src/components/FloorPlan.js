@@ -4,7 +4,8 @@ import { useDispatch, ReactReduxContext, Provider } from 'react-redux';
 import useImage from 'use-image';
 import {setRealDimentions} from '../actions/floorPlan';
 import plan from '../images/floorplan.png';
-import Person from '../components/Person';
+import Person from './Person';
+import Furniture from './Furniture';
 
 function FloorPlan() {
   const [floorplan] = useImage(plan);
@@ -32,6 +33,7 @@ function FloorPlan() {
               <Image image={floorplan} width={width} height={height} />
             </Layer>
             <Person />
+            <Furniture />
           </Provider>
         </Stage>
       )}
