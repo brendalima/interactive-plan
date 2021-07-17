@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { setPersonEntry } from '../actions/floorPlan';
+import {setFurnitures} from '../actions/floorPlan';
 
 function FormShapes() {
   const dispatch = useDispatch();
@@ -28,6 +28,7 @@ function FormShapes() {
             value={x}
             type="number"
             onChange={ ({ target }) => setX(target.value) }
+            required
           />
           <label>Vertical dimention (cm):</label>
           <input
@@ -35,6 +36,7 @@ function FormShapes() {
             value={y}
             type="number"
             onChange={ ({ target }) => setY(target.value) }
+            required
           />
         </div>
       )
@@ -48,6 +50,7 @@ function FormShapes() {
             value={d}
             type="number"
             onChange={ ({ target }) => setD(target.value) }
+            required
           />
         </div>
       )
@@ -58,7 +61,7 @@ function FormShapes() {
     <form>
       <label>Pick the geometry of your furniture</label>
       <select
-        value={ comparison }
+        value={ shape }
         onChange={ ({ target }) => setShape(target.value) }
       >
         <option hidden>Your shape</option>
