@@ -17,3 +17,9 @@ export const setFurnitures = (furniture) => ({
   type: SET_FURNITURES,
   furniture
 });
+
+export const DELETE_FURNITURE = 'DELETE_FURNITURE';
+export const deleteFurniture = (furniture) => ({
+  type: DELETE_FURNITURE,
+  furniture
+});

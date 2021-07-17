@@ -1,7 +1,8 @@
 import {
   SET_REAL_DIMENTIONS,
   SET_PERSON_ENTRY,
-  SET_FURNITURES
+  SET_FURNITURES,
+  DELETE_FURNITURE
 } from '../actions/floorPlan';
 
 const INITIAL_STATE = {
@@ -20,6 +21,8 @@ const floorPlan = (state = INITIAL_STATE, action) => {
     return { ...state, personWidthEntry: action.width, personThicknessEntry: action.thickness };
   case SET_FURNITURES:
     return { ...state, furnitures: [...state.furnitures, action.furniture] };
+  case DELETE_FURNITURE:
+    return { ...state, furnitures: action.furniture };
   default:
     return state;
   }
