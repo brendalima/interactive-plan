@@ -8,17 +8,20 @@ function FormShapes() {
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
   const [d, setD] = useState(0);
+  const [label, setLabel] = useState('');
 
   const clearForm = () => {
     setShape('');
     setX(0);
     setY(0);
     setD(0);
+    setLabel('');
   }
 
   const handleSubmit = () => {
     dispatch(setFurnitures({
       shape,
+      label,
       x,
       y,
       d,
@@ -30,6 +33,14 @@ function FormShapes() {
     if (shape === 'Rectangle') {
       return (
         <div>
+          <label>Label:</label>
+          <input
+            name="label"
+            value={label}
+            type="text"
+            onChange={ ({ target }) => setLabel(target.value) }
+            required
+          />
           <label>Horizontal dimention (cm):</label>
           <input
             name="x"
@@ -52,6 +63,14 @@ function FormShapes() {
     if (shape === 'Circle') {
       return (
         <div>
+          <label>Label:</label>
+          <input
+            name="label"
+            value={label}
+            type="text"
+            onChange={ ({ target }) => setLabel(target.value) }
+            required
+          />
           <label>Diameter dimention (cm):</label>
           <input
             name="d"
