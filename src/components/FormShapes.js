@@ -32,69 +32,87 @@ function FormShapes() {
   const renderDimentionForm = () => {
     if (shape === 'Rectangle') {
       return (
-        <div>
-          <label>Label:</label>
-          <input
-            name="label"
-            value={label}
-            type="text"
-            onChange={ ({ target }) => setLabel(target.value) }
-            required
-          />
-          <label>Horizontal dimention (cm):</label>
-          <input
-            name="x"
-            value={x}
-            type="number"
-            onChange={ ({ target }) => setX(target.value) }
-            required
-          />
-          <label>Vertical dimention (cm):</label>
-          <input
-            name="y"
-            value={y}
-            type="number"
-            onChange={ ({ target }) => setY(target.value) }
-            required
-          />
+        <div className="mt-2">
+          <label className="form-label mr-2">
+            Label
+            <input
+              className="form-control"
+              name="label"
+              value={label}
+              type="text"
+              onChange={ ({ target }) => setLabel(target.value) }
+              required
+            />
+          </label>
+          <label className="form-label mr-2">
+            Horizontal dimention (cm)
+            <input
+              className="form-control"
+              name="x"
+              value={x}
+              type="number"
+              onChange={ ({ target }) => setX(target.value) }
+              required
+            />
+          </label>
+          <label className="form-label">
+            Vertical dimention (cm)
+            <input
+              className="form-control"
+              name="y"
+              value={y}
+              type="number"
+              onChange={ ({ target }) => setY(target.value) }
+              required
+            />
+          </label>
         </div>
       )
     }
     if (shape === 'Circle') {
       return (
-        <div>
-          <label>Label:</label>
-          <input
-            name="label"
-            value={label}
-            type="text"
-            onChange={ ({ target }) => setLabel(target.value) }
-            required
-          />
-          <label>Diameter dimention (cm):</label>
-          <input
-            name="d"
-            value={d}
-            type="number"
-            onChange={ ({ target }) => setD(target.value) }
-            required
-          />
+        <div className="mt-2">
+          <label className="form-label mr-2">
+            Label
+            <input
+              className="form-control mr-2"
+              name="label"
+              value={label}
+              type="text"
+              onChange={ ({ target }) => setLabel(target.value) }
+              required
+            />
+          </label>
+          <label className="form-label">
+            Diameter dimention (cm)
+            <input
+              className="form-control"
+              name="d"
+              value={d}
+              type="number"
+              onChange={ ({ target }) => setD(target.value) }
+              required
+            />
+          </label>
         </div>
       )
     }
   }
 
   return (
-    <form>
-      <label>Pick the geometry of your furniture</label>
-      <select
-        value={ shape }
-        onChange={ ({ target }) => setShape(target.value) }
-      >
-        <option hidden>Your shape</option>
-        <option>Rectangle</option>
-        <option>Circle</option>
-      </select>
+    <form className="form-shapes">
+      <label className="form-label mt-3">
+        Pick the geometry of your furniture
+        <select
+          className="form-select"
+          value={ shape }
+          onChange={ ({ target }) => setShape(target.value) }
+        >
+          <option hidden>Your shape</option>
+          <option>Rectangle</option>
+          <option>Circle</option>
+        </select>
+      </label>
 
       { renderDimentionForm() }
 

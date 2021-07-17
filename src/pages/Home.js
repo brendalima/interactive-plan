@@ -9,10 +9,17 @@ function Home() {
   return (
     <div>
       <Header />
-      <FloorPlan />
-      <List />
-      <FormPerson />
-      <FormShapes />
+      <div className="page">
+        <div className="plan-list">
+          <FloorPlan />
+          <List />
+        </div>
+        <div className="forms">
+          <FormPerson />
+          <hr className="divider" />
+          <FormShapes />
+        </div>
+      </div>
     </div>
   )
 }

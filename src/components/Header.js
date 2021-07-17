@@ -5,9 +5,9 @@ import loft from '../images/loft.png';
 function Header() {
   return (
     <header>
-      <Navbar sticky="top" variant="light" bg="light" expand="md" collapseOnSelect>
+      <Navbar fixed="top" bg="white" expand="md" collapseOnSelect>
         <Navbar.Brand href="https://loft.com.br/">
-          <img src={loft} alt="Loft logo" width="30" />
+          <img src={loft} alt="Loft logo" width="45" />
         </Navbar.Brand>
         <Navbar.Toggle className="justify-content-end" />
         <Navbar.Collapse className="justify-content-end">

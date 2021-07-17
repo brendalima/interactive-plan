@@ -1,0 +1,105 @@
+body {
+  color: #191f23;
+  font-size: 16px;
+  margin-top: 71px;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~HEADER~~~~~~~~~~~~~~~~~~~~~~~ */
+header {
+  border-bottom: #e1e9ef solid 1px;
+}
+
+.navbar {
+  margin: 0 32px;
+}
+
+.nav-link {
+  color: #191f23 !important; 
+}
+
+.nav-link:hover {
+  border-bottom: #ff774a solid 4px;
+  margin-bottom: 0;
+}
+
+.dropdown-menu {
+  right: 0; 
+  left: auto; 
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~PAGE~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.page {
+  padding-top: 64px;
+  margin: 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.plan-list {
+  display: flex;
+}
+
+.forms {
+  margin-top: 64px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 80%;
+}
+
+.form-person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-shapes {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.list-container {
+  margin-left: 25px;
+  height: 500px;
+  min-width: 200px;
+  border: solid 1px #b7c8d5;
+  border-radius: 24px;
+  padding: 20px;
+}
+
+.divider {
+  border-top: solid 2px #b7c8d5;
+  position: relative;
+  top: 10px;
+  width: 100%;
+}
+
+button {
+  background-color: #ff774a;
+  border: solid 1px #d9562b;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 12px;
+}
+
+button:hover {
+  background-color: #d9562b;
+}
+
+button.del {
+  background-color: transparent;
+  border: none;
+  color: #ff774a;
+  font-weight: bold;
+}
+
+button.del:hover {
+  color: #d9562b;
+}
