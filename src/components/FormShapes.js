@@ -101,7 +101,7 @@ function FormShapes() {
 
   return (
     <form className="form-shapes">
-      <label className="form-label mt-3">
+      <label className="form-label">
         Pick the geometry of your furniture
         <select
           className="form-select"
