@@ -11,18 +11,26 @@ function FloorPlan() {
   const [floorplan] = useImage(plan);
   const [width, setWidth] = useState(1565);
   const [height, setHeight] = useState(1555);
+  const [winWidth, setWinWidth] = useState(window.innerWidth);
   const [ratio, setRatio] = useState(width/height);
   const dispatch = useDispatch();
 
   useEffect (() => {
-    const RENDER_WIDTH = 500;
+    window.addEventListener("resize", () => setWinWidth(window.innerWidth));
+  }, []);
+
+  useEffect(() => {
+    let RENDER_WIDTH = 500;
+    if (winWidth < 500) {
+      RENDER_WIDTH = 300;
+    }
     const REAL_WIDTH = 617;
     const REAL_HEIGHT = 610;
     setRatio(width/height);
     setWidth(RENDER_WIDTH);
     setHeight(RENDER_WIDTH/ratio);
     dispatch(setRealDimentions(REAL_WIDTH, REAL_HEIGHT));
-  }, []);
+  }, [winWidth]);
 
   return (
     <ReactReduxContext.Consumer>
