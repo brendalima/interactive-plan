@@ -32,7 +32,7 @@ function FormShapes() {
   const renderDimentionForm = () => {
     if (shape === 'Rectangle') {
       return (
-        <div className="mt-2">
+        <div className="mt-2 inputs">
           <label className="form-label mr-2">
             Label
             <input
@@ -71,7 +71,7 @@ function FormShapes() {
     }
     if (shape === 'Circle') {
       return (
-        <div className="mt-2">
+        <div className="mt-2 inputs">
           <label className="form-label mr-2">
             Label
             <input

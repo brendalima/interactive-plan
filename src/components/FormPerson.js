@@ -13,7 +13,7 @@ function FormPerson() {
 
   return (
     <form className="form-person">
-      <div>
+      <div className="inputs">
         <label className="form-label">
           Enter custom body width (cm)
           <input

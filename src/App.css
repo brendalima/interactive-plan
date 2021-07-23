@@ -1,13 +1,15 @@
 body {
   color: #191f23;
   font-size: 16px;
-  margin-top: 71px;
+  margin: 0;
 }
 
 
 /* ~~~~~~~~~~~~~~~~~~~~HEADER~~~~~~~~~~~~~~~~~~~~~~~ */
-header {
+
+.main-header {
   border-bottom: #e1e9ef solid 1px;
+  margin: 0;
 }
 
 .navbar {
@@ -32,7 +34,7 @@ header {
 /* ~~~~~~~~~~~~~~~~~~~~PAGE~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .page {
-  padding-top: 64px;
+  padding-top: 135px;
   margin: 0 16px;
   display: flex;
   flex-direction: column;
@@ -42,7 +44,9 @@ header {
 }
 
 .plan-list {
+  width: 300;
   display: flex;
+  flex-direction: column;
 }
 
 .forms {
@@ -59,6 +63,12 @@ header {
   align-items: center;
 }
 
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .form-shapes {
   display: flex;
   align-items: center;
@@ -66,12 +76,13 @@ header {
 }
 
 .list-container {
-  margin-left: 25px;
-  height: 500px;
-  min-width: 200px;
+  margin-top: 16px;
+  max-height: 300px;
+  width: 100%;
   border: solid 1px #b7c8d5;
-  border-radius: 24px;
+  border-radius: 10px;
   padding: 20px;
+  overflow: auto;
 }
 
 .divider {
