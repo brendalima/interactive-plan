@@ -15,7 +15,7 @@ body {
 }
 
 .navbar {
-  margin: 0 32px;
+  padding: 0 32px;
 }
 
 .nav-link {
@@ -37,7 +37,6 @@ body {
 
 .page {
   padding-top: 135px;
-  margin: 0 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
