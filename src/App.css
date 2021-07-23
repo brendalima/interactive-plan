@@ -177,3 +177,23 @@ button.del:hover {
     margin-top: 0;
   }
 }
+
+
+/* ~~~~~~~~~~~~~~~~~~~~XLARGE~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@media screen and (min-width: 1400px) {
+  .plan-list {
+    flex-direction: row;
+  }
+
+  .list-container {
+    margin-top: 0;
+    min-width: 300px;
+    max-width: 500px;
+    margin-left: 15px;
+  }
+
+  .forms {
+    margin-right: 16px;
+  }
+}
