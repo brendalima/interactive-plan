@@ -2,6 +2,7 @@
 
 This is an app intended for users who might be interested in buying apartments. It's inspired by [Loft](https://loft.com.br/)'s layout and suggests a new feature that will allow a possible buyer to not only see the fully decorated floorplan, but also interact with it through a scaled model of a person.
 The idea is helping the buyer have a realistic view of how well they are able to move inside the apartment with all its furniture.
+
 Talking about furniture, the user will also be able to add geometric shapes representing real-life objects they might want to place in the apartment, so they are not limited by the initial layout suggestion and can actually see how any objects they might have would fit in the avaiable space before deciding to schedule a visit.
 
 ![image](public/screenshot-localhost_3000-2021.07.23-16_22_13.png)
@@ -51,5 +52,6 @@ This project was developed using:
 
 ## Deploy (via Heroku)
 Avaiable in desktop and mobile versions
+
 https://interactive-plan.herokuapp.com/
 
