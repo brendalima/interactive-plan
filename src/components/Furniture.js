@@ -4,7 +4,13 @@ import { Layer, Rect, Circle } from 'react-konva';
 
 function Furniture() {
   const state = useSelector(({ floorPlan }) => floorPlan);
-  const { furnitures, realWidth, realHeight } = state;
+  const {
+    furnitures,
+    realWidth,
+    realHeight,
+    renderWidth,
+    renderHeight
+  } = state;
 
   return (
     <Layer>
@@ -13,8 +19,8 @@ function Furniture() {
         if (shape === 'Rectangle') {
           return (
             <Rect
-              width={(500 * x) / realWidth}
-              height={(500 * y) / realHeight}
+              width={ (renderWidth * x) / realWidth }
+              height={ (renderHeight * y) / realHeight }
               fill="white"
               stroke="black"
               draggable
@@ -23,7 +29,7 @@ function Furniture() {
         }
         return (
           <Circle
-            radius={ ((500 * d) / realWidth) / 2 }
+            radius={ ((renderWidth * d) / realWidth) / 2 }
             fill="white"
             stroke="black"
             draggable
