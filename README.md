@@ -17,6 +17,8 @@ This project was developed using:
 
 ✅  Redux
 
+✅  Hooks
+
 ✅  Bootstrap
 
 ✅  React-Konva
