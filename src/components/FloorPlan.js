@@ -6,7 +6,7 @@ import { setRealDimentions, setRenderDimentions } from '../actions/floorPlan';
 import plan from '../images/floorplan.png';
 import Person from './Person';
 import Furniture from './Furniture';
-import { data } from '../aux/plan';  
+import { data } from '../aux/data';  
 
 function FloorPlan() {
   const [floorplan] = useImage(plan);
