@@ -24,6 +24,8 @@ function Person() {
     trRef.current.getLayer().batchDraw();
   }, []);
 
+  console.log((renderWidth * personWidthEntry) / realWidth);
+
   return (
     <Layer>
       <Image
