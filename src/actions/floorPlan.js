@@ -23,3 +23,10 @@ export const deleteFurniture = (furniture) => ({
   type: DELETE_FURNITURE,
   furniture
 });
+
+export const SET_RENDER_DIMENTIONS = 'SET_RENDER_DIMENTIONS';
+export const setRenderDimentions = (width, height) => ({
+  type: SET_RENDER_DIMENTIONS,
+  width,
+  height,
+});

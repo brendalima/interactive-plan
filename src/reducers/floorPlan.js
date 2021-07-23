@@ -2,15 +2,18 @@ import {
   SET_REAL_DIMENTIONS,
   SET_PERSON_ENTRY,
   SET_FURNITURES,
-  DELETE_FURNITURE
+  DELETE_FURNITURE,
+  SET_RENDER_DIMENTIONS
 } from '../actions/floorPlan';
 
 const INITIAL_STATE = {
-  realWidth: '',
-  realHeight: '',
+  realWidth: 0,
+  realHeight: 0,
   personWidthEntry: 50,
   personThicknessEntry: 30,
   furnitures: [],
+  renderWidth: 0,
+  renderHeight: 0,
 };
 
 const floorPlan = (state = INITIAL_STATE, action) => {
@@ -23,6 +26,8 @@ const floorPlan = (state = INITIAL_STATE, action) => {
     return { ...state, furnitures: [...state.furnitures, action.furniture] };
   case DELETE_FURNITURE:
     return { ...state, furnitures: action.furniture };
+  case SET_RENDER_DIMENTIONS:
+    return { ...state, renderWidth: action.width, renderHeight: action.height };
   default:
     return state;
   }
