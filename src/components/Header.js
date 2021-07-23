@@ -7,7 +7,7 @@ function Header() {
     <header>
       <Navbar className="main-header" fixed="top" bg="white" expand="md" collapseOnSelect>
         <Navbar.Brand href="https://loft.com.br/">
-          <img src={loft} alt="Loft logo" width="45" />
+          <img src={ loft } alt="Loft logo" width="45" />
         </Navbar.Brand>
         <Navbar.Toggle className="justify-content-end" />
         <Navbar.Collapse className="justify-content-end">

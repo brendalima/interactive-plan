@@ -17,7 +17,7 @@ function List() {
     <div className="list-container">
       <ol>
         {furnitures.map((furniture) => {
-          const {shape, label, x, y, d} = furniture;
+          const { shape, label, x, y, d } = furniture;
           if (shape === 'Rectangle') {
             return (
               <li>

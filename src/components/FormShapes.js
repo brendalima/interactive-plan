@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import {setFurnitures} from '../actions/floorPlan';
+import { setFurnitures } from '../actions/floorPlan';
 
 function FormShapes() {
   const dispatch = useDispatch();
@@ -29,27 +29,33 @@ function FormShapes() {
     clearForm();
   }
 
+  const renderLabelInput = () => {
+    return (
+      <label className="form-label mr-2">
+        Label
+        <input
+          className="form-control"
+          name="label"
+          value={ label }
+          type="text"
+          onChange={ ({ target }) => setLabel(target.value) }
+          required
+        />
+      </label>
+    )
+  }
+
   const renderDimentionForm = () => {
     if (shape === 'Rectangle') {
       return (
         <div className="mt-2 inputs">
-          <label className="form-label mr-2">
-            Label
-            <input
-              className="form-control"
-              name="label"
-              value={label}
-              type="text"
-              onChange={ ({ target }) => setLabel(target.value) }
-              required
-            />
-          </label>
+          { renderLabelInput() }
           <label className="form-label mr-2">
             Horizontal dimention (cm)
             <input
               className="form-control"
               name="x"
-              value={x}
+              value={ x }
               type="number"
               onChange={ ({ target }) => setX(target.value) }
               required
@@ -60,7 +66,7 @@ function FormShapes() {
             <input
               className="form-control"
               name="y"
-              value={y}
+              value={ y }
               type="number"
               onChange={ ({ target }) => setY(target.value) }
               required
@@ -72,23 +78,13 @@ function FormShapes() {
     if (shape === 'Circle') {
       return (
         <div className="mt-2 inputs">
-          <label className="form-label mr-2">
-            Label
-            <input
-              className="form-control mr-2"
-              name="label"
-              value={label}
-              type="text"
-              onChange={ ({ target }) => setLabel(target.value) }
-              required
-            />
-          </label>
+          { renderLabelInput() }
           <label className="form-label">
             Diameter dimention (cm)
             <input
               className="form-control"
               name="d"
-              value={d}
+              value={ d }
               type="number"
               onChange={ ({ target }) => setD(target.value) }
               required

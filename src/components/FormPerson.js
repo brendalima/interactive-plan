@@ -8,7 +8,7 @@ function FormPerson() {
   const [customThickness, setCustomThickness] = useState(30);
 
   const handleSubmit = () => {
-    dispatch(setPersonEntry(Number(customWidth), Number(customThickness)));
+    dispatch(setPersonEntry(customWidth, customThickness));
   }
 
   return (
@@ -19,7 +19,7 @@ function FormPerson() {
           <input
             className="form-control"
             name='width'
-            value={customWidth}
+            value={ customWidth }
             type="number"
             onChange={ ({ target }) => setCustomWidth(target.value) }
           />
@@ -29,7 +29,7 @@ function FormPerson() {
           <input
             className="form-control"
             name='thickness'
-            value={customThickness}
+            value={ customThickness }
             type="number"
             onChange={ ({ target }) => setCustomThickness(target.value) }
           />
