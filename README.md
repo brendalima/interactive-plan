@@ -57,3 +57,5 @@ Available in desktop and mobile versions
 
 https://interactive-plan.herokuapp.com/
 
+* Note: Due to free deployment platform, the server might be down when you try to access it and it might return an error at first.
+If this happens, please refresh the page and try again. Feel free to contact me if the issue persists.
